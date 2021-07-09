@@ -1,0 +1,164 @@
+.info-resto {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    /* margin: 2rem; */
+    margin: auto;
+}
+.selling-item {
+    display: flex;
+    flex-direction: column;
+}
+.rev-text, #foods .innerText, #drinks .innerText {
+    list-style: none;
+}
+/* categories */
+#categories {
+    display: flex;
+    flex-direction: column;
+}
+#categories h4 {
+    align-self: center;
+}
+#categories .innerText {
+    display: flex;
+    justify-content: space-evenly;
+}
+figcaption h3 {
+    text-transform: uppercase;
+}
+/* menus */
+.menus {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    background-color: #1e2022;
+    border-radius: 0px 0px 20px 20px;
+}
+.menus h4{
+    background-color: #810000;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+}
+.menus .innerText {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+.menus .innerText li {
+    align-self: center;
+    padding: 10px;
+}
+
+.info-resto figcaption {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.info-resto figcaption h3 {
+    flex-grow: 2;
+}
+
+.info-resto figcaption p:nth-child(2) {
+    flex: 0 1 calc(50% - 1em);
+    text-align: right;
+}
+
+
+/* cust-review */
+#cust-review {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-top: 20px;
+}
+#cust-review h4,
+.menus h4, 
+figure p {
+    text-align: center;
+}
+.rev-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* height: 100px; */
+    background-color: #810000;
+    border-radius: 0px 20px 0px 20px;
+}
+.rev-text li:nth-child(1) {
+    flex-basis: 30%;
+    padding: 20px;
+
+}
+.rev-text li:nth-child(2) {
+    padding: 20px;
+}
+.rev-text li:nth-child(3) {
+    flex-basis: 100%;
+    text-align: center;
+    background-color: #1e2022;
+    padding: 20px;
+    border-radius: 0px 0px 0px 20px;
+    font-style: italic;
+}
+#cust-review h4 {
+    background-color: #810000;
+    padding: 20px;
+}
+#save {
+   position: fixed;
+   bottom: 5%;
+   right: 5%;
+   padding: 20px;
+   border-radius: 50%;
+   /* background-color: transparent; */
+}
+
+.like-property {
+    display: flex;
+    justify-content: center;
+}
+
+#like-btn {
+    font-size: 2.5rem;
+    color: #810000;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    height: 44px;
+    width: 44px;
+}
+
+/* fuin nambah review */
+/* .content-review {
+    display: flex;
+    flex-direction: column;
+}
+.name-container {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #1e2022;
+    height: 50px;
+}
+.name-container p {
+    margin: auto;
+}
+.name-container input {
+    font-size: 1rem;
+}
+#textReview {
+    height: 100px;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+}
+#submit {
+    align-self: center;
+    height: 44px;
+    width: 120px;
+} */
+
+
+
