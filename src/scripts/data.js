@@ -12,7 +12,7 @@ const createList = (restaurant) => {
     listRest.innerHTML += `
     <section class="card">
         <figure>
-            <img class="lazyload" src="${resultImg}" alt="img-${e.name}">
+            <img class="lazyload" data-src="${resultImg}" alt="img-${e.name}">
             <figcaption>${e.city}</figcaption>
         </figure>
         <div class="details">

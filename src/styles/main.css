@@ -108,13 +108,13 @@ img {
 }
 /* header */
 .header {
-    background-image: url('../public/images/heros/hero-image_4.jpg');
+    background-image: url('../public/images/heros/mobile.jpg'); /*mobile*/
     background-position: center;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
+    /* background-size: 767px 400px; */
+    /* background-repeat: no-repeat; */
     padding: 10px;
     box-sizing: border-box;
-    height: 300px;
+    height: 400px;
     display: grid;
     place-content: center;
     color: #eeeeee;

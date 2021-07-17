@@ -14,31 +14,51 @@ describe('Liking A Restaurant', () => {
   beforeEach(() => {
     likeContainer();
     createBtn();
-    like({ id: 2 });
+    // like({ id: 1 });
   });
 
-  it('should show saved/liked button', async () => {
-    const rest = await FavoriteIdb.getRest(2);
+  it('should show saved/liked button', () => {
     const btn = document.getElementById('like-btn');
     const change = changeButton();
 
-    if (rest === undefined) {
-      btn.innerHTML = change.lk;
-    }
+    btn.innerHTML = change.lk;
 
     expect(document.getElementById('ico-like'))
       .toBeTruthy();
   });
 
-  it('should not show saved/liked button', async () => {
-    const rest = await FavoriteIdb.getRest(2);
+  it('should not show saved/liked button', () => {
     const btn = document.getElementById('like-btn');
     const change = changeButton();
+    btn.innerHTML = change.lk;
 
-    if (rest !== undefined) {
-      btn.innerHTML = change.sv;
-    }
+    expect(document.getElementById('ico-saved'))
+      .toBeFalsy();
+  });
 
-    expect(document.getElementById('ico-saved')).toBeFalsy();
+  it('should like restaurant', async () => {
+    const btn = document.getElementById('like-btn');
+    const change = changeButton();
+    btn.innerHTML = change.lk;
+
+    like({ id: 1 });
+
+    btn.dispatchEvent(new Event('click'));
+    const rest = await FavoriteIdb.getRest(1);
+    expect(rest).toEqual({ id: 1 });
+  });
+
+  it('should cancel liked restaurant because already saved', async () => {
+    const btn = document.getElementById('like-btn');
+    const change = changeButton();
+    btn.innerHTML = change.lk;
+
+    like({ id: 1 });
+
+    btn.dispatchEvent(new Event('click'));
+    const allrest = await FavoriteIdb.getAll();
+    expect(allrest).toEqual([{ id: 1 }]);
+
+    FavoriteIdb.deleteRest(1);
   });
 });

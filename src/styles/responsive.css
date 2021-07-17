@@ -1,8 +1,8 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 578px) {
     .header {
+        background-image: url('../public/images/heros/mobile-xtra-small.jpg'); /*mobile xtra small*/
         height: 400px;
-        background-size: auto 100%;
     }
     .menu {
         grid-template-columns: .1fr 1fr;
@@ -41,16 +41,15 @@
         grid-template-columns: repeat(3, .2fr);
         /* gap: 5px; */
     }
+    .header {
+        background-image: url('../public/images/heros/desktop.jpg'); /*desktop*/
+        height: 550px;
+    }
     .list-rest {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
         margin: 2rem;
-        /* display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly; */
-        /* display: grid;
-        grid-template-columns: repeat(2, 2fr); */
     }
     #content .card {
         /* margin: 10px; */
@@ -99,7 +98,8 @@
     } */
     .header {
         font-size: 2rem;
-        height: 60vh;
+        background-image: url('../public/images/heros/desktop-large.jpg'); /*desktop large*/
+        background-size: cover;
     }
     #content {
         /* grid-template-columns: repeat(3, 2fr); */

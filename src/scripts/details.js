@@ -6,8 +6,6 @@ import { loadingApi } from './list-rest';
 import { like, changeButton } from './like';
 // import { like, deleteLike } from './like';
 import FavoriteIdb from './db';
-import 'lazysizes';
-import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 // mengambil nilai kategori, menu makan dan minum
 const getNestedItem = (nameItem, tagId) => {
@@ -59,7 +57,7 @@ const showDetails = (details) => {
     <section class="moreinfo">
         <div class="info-resto" tabindex="0">
             <figure>
-                <img class="lazyload" src="${img}" alt="restoran">
+                <img src="${img}" alt="restoran">
                 <figcaption>
                     <h3>${details.restaurant.name}</h3>
                     <p><i class="fa fa-star"></i> ${details.restaurant.rating}</p>
